@@ -45,6 +45,9 @@ li.dropdown {
     display: block;
     text-align: left;
 }
+.dropdown:hover .dropdown-content{
+  display: block;
+}
 
 .dropdown-content a:hover {background-color: #f1f1f1}
 
@@ -60,7 +63,7 @@ li.dropdown {
   </li>
   <!--Events page goes here-->
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn" onclick=flip("events") onmouseout="off">Events</a>
+    <a href="javascript:void(0)" class="dropbtn" onclick=flip(events) onmouseout="off">Events</a>
     <div class="dropdown-content" id="events">
       <a href="#">Restaurants</a>
       <a href="#">Parks</a>
@@ -72,7 +75,7 @@ li.dropdown {
   </li>
   <!--Community Resources-->
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn" onclick=flip("CR") onmouseout="off">Community Resources</a>
+    <a href="javascript:void(0)" class="dropbtn" onclick=flip(CR) onmouseout="off">Community Resources</a>
     <div class="dropdown-content" id="CR">
       <a href="#">Food Banks</a>
       <a href="#">School Supplies</a>
@@ -89,7 +92,7 @@ li.dropdown {
   </li>
   <!--About Us-->
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn" onclick=flip("aboutus") onmouseout="off">About Us</a>
+    <a href="javascript:void(0)" class="dropbtn" onclick=flip(aboutus) onmouseout="off">About Us</a>
     <div class="dropdown-content" id="aboutus">
       <a href="#">Mission Statement</a>
       <a href="#">Team</a>
@@ -106,38 +109,7 @@ li.dropdown {
 <p>Click on the "Dropdown" link to see the dropdown menu.</p>
 
 <script>
-/* Function to show the right bar */
-function flip(id) {
-  if(id="events"){
-    document.getElementById("events").classList.toggle("show");
-  }else if("CR") {
-    document.getElementById("CR").classList.toggle("show");
-  }else if("aboutus") {
-      document.getElementById("aboutus").classList.toggle("show");
-  }
-}
-function off() {
-  var dropdowns = document.getElementsByClassName("dropdown-content");
-  for (var d = 0; d < dropdowns.length; d++) {
-    var openDropdown = dropdowns[d];
-  if (openDropdown.classList.contains('show')) {
-    openDropdown.classList.remove('show');
-}}}
 
-
-// Close the dropdown if the user clicks outside of it
-/*window.onmouseover = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var d = 0; d < dropdowns.length; d++) {
-      var openDropdown = dropdowns[d];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}*/
 </script>
 
 </body>
